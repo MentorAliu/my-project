@@ -6,7 +6,7 @@ export const Sidebar = () => {
   return (
     <Box mt="20" borderRight="1px">
       {sidebarItems.map(item => (
-        <Link to={item.path}>
+        <Link to={item.path} key={item.path}>
           <Flex
             key={item.name}
             gap="4"
