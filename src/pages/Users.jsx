@@ -1,5 +1,14 @@
-import React from 'react'
+import {
+  UsersHeader,
+  UsersTable,
+} from '../components/pageCompoents/users'
+import { Box } from '@chakra-ui/react'
 
 export const Users = () => {
-  return <div>Users</div>
+  return (
+    <Box width="full">
+      <UsersHeader />
+      <UsersTable />
+    </Box>
+  )
 }
