@@ -16,6 +16,8 @@ export const UsersTableRow = ({
   lastName,
   department,
   handleRowClick,
+  onOpen,
+  onOpenDelete,
 }) => {
   return (
     <Tr>
@@ -30,10 +32,22 @@ export const UsersTableRow = ({
               <KeyboardArrowDownIcon />
             </MenuButton>
             <MenuList>
-              <MenuItem onClick={() => handleRowClick(id)}>
+              <MenuItem
+                onClick={() => {
+                  onOpen()
+                  handleRowClick(id)
+                }}
+              >
                 Edit
               </MenuItem>
-              <MenuItem>Delete</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  onOpenDelete()
+                  handleRowClick(id)
+                }}
+              >
+                Delete
+              </MenuItem>
             </MenuList>
           </Menu>
         </Flex>

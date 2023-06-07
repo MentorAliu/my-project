@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const Sidebar = () => {
   return (
-    <Box mt="20" borderRight="1px">
+    <Box mt="20">
       {sidebarItems.map(item => (
         <Link to={item.path} key={item.path}>
           <Flex

@@ -4,8 +4,14 @@ import { Header } from './Header'
 
 const Layout = ({ children }) => {
   return (
-    <Flex height="xl">
-      <Box height="lg" width="60">
+    <Flex height="100vh">
+      <Box
+        height="lg"
+        width="60"
+        borderRight="1px"
+        borderColor="gray.300"
+        minHeight="100vh"
+      >
         <Sidebar />
       </Box>
       <Box flex="1" bg="gray.100">
